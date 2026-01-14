@@ -7,13 +7,17 @@ def get_requirement()->List[str]:
     """
     requirement_lst:List[str]=[]
     try:
-        with open("req.txt","r") as file:
+        with open("req.txt","r", encoding="utf-8") as file:
             lines=file.readlines()
             for line in lines:
                 requirement=line.strip()
-                if requirement and requirement !="-e .":
-                    
-                    requirement_lst.append(requirement)
+                if not requirement:
+                    continue
+                if requirement.startswith("#"):
+                    continue
+                if requirement in {"-e .", "--editable ."}:
+                    continue
+                requirement_lst.append(requirement)
     except FileNotFoundError:
         print("file not found")
     

@@ -38,4 +38,7 @@ class DataIngestionConfig:
         self.collection_name:str=training_pipeline.DATA_INGESTION_COLLECTION_NAME
         self.database_name:str=training_pipeline.DATA_INGESTION_DATABASE_NAME
         # Keep attribute name stable even though constant has a typo ("RATION" vs "RATIO")
-        self.train_test_split_ratio:float=training_pipeline.DATA_INGESTION_TRAIN_TEST_SPLIT_RATION
+        self.train_test_split_ratio:float=training_pipeline.DATA_INGESTION_TRAIN_TEST_SPLIT_RATION 
+        
+        
+        

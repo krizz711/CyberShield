@@ -17,4 +17,9 @@ dnspython>=2.6.1
 dill
 pyaml
 mlflow
+
+dagshub
+fastapi
+uvicorn
+
 # -e .
